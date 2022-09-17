@@ -1,0 +1,128 @@
+﻿@model Car_Sales_And_Inventory_Management_Master.ViewModel.CarCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CarCreateViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="car_id" class="control-label"></label>
+                <input asp-for="car_id" class="form-control" />
+                <span asp-validation-for="car_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="car_model" class="control-label"></label>
+                <input asp-for="car_model" class="form-control" />
+                <span asp-validation-for="car_model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="launch_date" class="control-label"></label>
+                <input asp-for="launch_date" class="form-control" />
+                <span asp-validation-for="launch_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="no_of_images" class="control-label"></label>
+                <input asp-for="no_of_images" class="form-control" />
+                <span asp-validation-for="no_of_images" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rating" class="control-label"></label>
+                <input asp-for="rating" class="form-control" />
+                <span asp-validation-for="rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="specification_id" class="control-label"></label>
+                <input asp-for="specification_id" class="form-control" />
+                <span asp-validation-for="specification_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="type" class="control-label"></label>
+                <select asp-for="type" class="form-control"></select>
+                <span asp-validation-for="type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="average" class="control-label"></label>
+                <input asp-for="average" class="form-control" />
+                <span asp-validation-for="average" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="max_speed" class="control-label"></label>
+                <input asp-for="max_speed" class="form-control" />
+                <span asp-validation-for="max_speed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dimensionsId" class="control-label"></label>
+                <input asp-for="dimensionsId" class="form-control" />
+                <span asp-validation-for="dimensionsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="no_of_seats" class="control-label"></label>
+                <input asp-for="no_of_seats" class="form-control" />
+                <span asp-validation-for="no_of_seats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="free_space" class="control-label"></label>
+                <input asp-for="free_space" class="form-control" />
+                <span asp-validation-for="free_space" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="airbags" class="control-label"></label>
+                <input asp-for="airbags" class="form-control" />
+                <span asp-validation-for="airbags" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fuel_Consumption_Type" class="control-label"></label>
+                <select asp-for="fuel_Consumption_Type" class="form-control"></select>
+                <span asp-validation-for="fuel_Consumption_Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="additional_description" class="control-label"></label>
+                <input asp-for="additional_description" class="form-control" />
+                <span asp-validation-for="additional_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="engine_model" class="control-label"></label>
+                <input asp-for="engine_model" class="form-control" />
+                <span asp-validation-for="engine_model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="performance" class="control-label"></label>
+                <input asp-for="performance" class="form-control" />
+                <span asp-validation-for="performance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="efficiency" class="control-label"></label>
+                <input asp-for="efficiency" class="form-control" />
+                <span asp-validation-for="efficiency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

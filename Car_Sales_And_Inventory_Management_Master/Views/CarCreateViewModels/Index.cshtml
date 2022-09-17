@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Car_Sales_And_Inventory_Management_Master.ViewModel.CarCreateViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.car_model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.launch_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_images)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.specification_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.average)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.max_speed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dimensionsId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_seats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.free_space)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.airbags)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fuel_Consumption_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.additional_description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.engine_model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.performance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.efficiency)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.car_model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.launch_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_images)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.specification_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.average)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.max_speed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dimensionsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_seats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.free_space)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.airbags)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fuel_Consumption_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.additional_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.engine_model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.performance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.efficiency)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.car_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.car_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.car_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
